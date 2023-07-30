@@ -25,3 +25,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@media (max-width: 639px) {
+  .sm-bg-gradient {
+    @apply bg-gradient-to-r from-gray-950 to-gray-800;
+  }
+}

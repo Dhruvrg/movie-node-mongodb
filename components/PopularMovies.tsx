@@ -30,7 +30,7 @@ const movies: Movie[] = [
 
 export default function pop() {
   return (
-    <>
+    <div className="sm-bg-gradient lg:bg-black ">
       <h1 className="text-2xl font-bold mb-2 pl-5 pt-5 md:text-left md:pl-0 lg:pl-80">
         Popular Movies 2023
       </h1>
@@ -50,6 +50,6 @@ export default function pop() {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
