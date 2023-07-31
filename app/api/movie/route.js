@@ -1,5 +1,5 @@
+import Movie from "../../../models/movie";
 import { connectToDB } from "../../../utils/database";
-import Movie from "@models/movie";
 
 export const GET = async () => {
   try {

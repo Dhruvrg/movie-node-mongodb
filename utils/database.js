@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 let isConnected = false;
 const MONGODB_URI =
-  "mongodb+srv://my108projects:my108projects@cluster0.hqnwgpc.mongodb.net/mydb?retryWrites=true&w=majority";
+  "mongodb+srv://twitter108drg:twitter108drg@cluster0.cu8egm9.mongodb.net/twitter?retryWrites=true&w=majority";
 
 export const connectToDB = async () => {
   mongoose.set("strictQuery", true);
