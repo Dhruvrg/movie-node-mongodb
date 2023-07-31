@@ -30,7 +30,7 @@ const movies: Movie[] = [
 
 export default function pop() {
   return (
-    <div className="sm-bg-gradient lg:bg-black border-b-1 border-b-slate-900 sm:border-hidden">
+    <div className="sm-bg-gradient lg:bg-black border-b-1 border-b-gray-700 sm:border-hidden">
       <h1 className="text-2xl font-bold mb-2 pl-5 pt-5 md:text-left md:pl-0 lg:pl-80">
         Continue Watching
       </h1>
