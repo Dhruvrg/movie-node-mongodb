@@ -12,6 +12,7 @@ type Movie = {
 export default function pop() {
   const initialMovies: Movie[] = [];
   const [movies, setMovies] = useState(initialMovies);
+
   useEffect(() => {
     const getMovies = async () => {
       const response = await fetch("/api/movie");
@@ -20,6 +21,7 @@ export default function pop() {
     };
     getMovies();
   }, []);
+
   return (
     <div className="sm-bg-gradient lg:bg-black ">
       <h1 className="text-2xl font-bold pl-5 pt-5 md:text-left md:pl-0 lg:pl-80">

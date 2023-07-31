@@ -3,18 +3,17 @@ import React, { useEffect, useState } from "react";
 
 type Movie = {
   title: string;
-  rating: number;
   image: string;
   color?: string;
-    
 };
 
 export default function pop() {
   const initialMovies: Movie[] = [];
   const [movies, setMovies] = useState(initialMovies);
+
   useEffect(() => {
     const getMovies = async () => {
-      const response = await fetch("/api/movie");
+      const response = await fetch("/api/watchnowmovies");
       const data = await response.json();
       setMovies(data);
     };
@@ -47,7 +46,11 @@ export default function pop() {
                       {movie.title}
                     </h2>
                   </div>
-                  <img src="info.svg" alt="info" className="h-5 w-5 sm:h-10 sm:w-6 " />
+                  <img
+                    src="info.svg"
+                    alt="info"
+                    className="h-5 w-5 sm:h-10 sm:w-6 "
+                  />
                 </div>
               </div>
             </div>
