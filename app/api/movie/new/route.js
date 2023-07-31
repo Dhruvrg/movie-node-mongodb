@@ -1,5 +1,5 @@
-import { connectToDB } from "@utils/database";
-import Movie from "@models/prompt";
+import { connectToDB } from "../../../utils/database";
+import Movie from "@models/movie";
 
 export const POST = async (req) => {
   const { title, image, rating, color } = await req.json();
