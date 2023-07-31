@@ -53,17 +53,17 @@ const Navbar = () => {
             </div>
           </div>
           <div className="md:hidden flex items-center justify-between px-5">
-            <div className="text-white sm:text-xl text-2xl font-bold">MOVEA</div>
+            <div className="text-white sm:text-xl text-2xl font-bold b-2">MOVEA</div>
             <div
               onClick={toggle}
-              className="py-1 px-2 border-[1px] border-neutral-200 flex flex-row items-center gap-1 rounded-xl cursor-pointer"
+              className="py-2 px-2 border-[1px] border-neutral-200 flex flex-row items-center gap-1 rounded-xl cursor-pointer"
             >
               <AiOutlineMenu />
               <Avatar src={null} />
             </div>
           </div>
           {isOpen && (
-            <div className="gap-2 md:hidden flex flex-col items-center">
+            <div className="gap-2 md:hidden flex flex-col items-center mt-1">
               <div
                 className="text-lg hover:text-white hover:text-xl duration-300"
                 onClick={() => router.push("/properties")}
