@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <>
       {domLoaded && (
-        <div className="md:flex justify-around text-gray-400 bg-black border-b-[1px] border-gray-800 py-5  sm-bg-gradient mix-blend-screen">
+        <div className="md:flex justify-around text-gray-400 bg-black border-b-[1px] border-gray-800/50 py-5  sm-bg-gradient mix-blend-screen">
           <div className="hidden md:block text-white text-2xl font-bold">
             MOVEA
           </div>
