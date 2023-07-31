@@ -1,6 +1,6 @@
 import { Schema, model, models } from "mongoose";
 
-const MovieSchema = new Schema({
+const WatchingSchema = new Schema({
   title: {
     type: String,
     unique: [true, "name already exists!"],
@@ -10,15 +10,14 @@ const MovieSchema = new Schema({
     type: String,
     required: [true, "image is required!"],
   },
-  rating: {
-    type: Number,
-    required: [true, "rating is required!"],
+  time_remaining: {
+    type: String,
   },
   color: {
     type: String,
   },
 });
 
-const Movie = models.Movie || model("Movie", MovieSchema);
+const Watching = models.Watching || model("Watching", WatchingSchema);
 
-export default Movie;
+export default Watching;

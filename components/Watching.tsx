@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import { useEffect, useState } from "react";
 
 type Movie = {
   title: string;
@@ -7,28 +9,18 @@ type Movie = {
   color?: string;
 };
 
-const movies: Movie[] = [
-  {
-    title: "Interstellar",
-    time_remaining: "1hr 8min",
-    image: "interstellar.svg",
-    color: "rgba(14, 42, 53, 0.6)",
-  },
-  {
-    title: "Stranger Things",
-    time_remaining: "1hr 8min",
-    image: "strangerThings.svg",
-    color: "rgba(83, 31, 38, 0.6)",
-  },
-  {
-    title: "Spy x Family",
-    time_remaining: "1hr 8min",
-    image: "spyxfamily.svg",
-    color: "rgba(68, 54, 50, 0.6)",
-  },
-];
-
 export default function pop() {
+  const initialMovies: Movie[] = [];
+  const [movies, setMovies] = useState(initialMovies);
+
+  useEffect(() => {
+    const getMovies = async () => {
+      const response = await fetch("/api/watching");
+      const data = await response.json();
+      setMovies(data);
+    };
+    getMovies();
+  }, []);
   return (
     <div className="sm-bg-gradient lg:bg-black border-b-1 border-b-gray-700 sm:border-hidden">
       <h1 className="text-2xl font-bold pl-8 pt-5 md:text-left md:pl-2 lg:pl-80">
