@@ -10,14 +10,12 @@ const WatchingSchema = new Schema({
     type: String,
     required: [true, "image is required!"],
   },
-  time_remaining: {
-    type: String,
-  },
   color: {
     type: String,
   },
 });
 
-const Watching = models.Watching || model("Watching", WatchingSchema);
+const Watching =
+  models.Watching || model("Watching", WatchingSchema);
 
 export default Watching;

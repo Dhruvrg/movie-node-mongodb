@@ -9,13 +9,13 @@ type Movie = {
   color?: string;
 };
 
-export default function pop() {
+export default function Watching() {
   const initialMovies: Movie[] = [];
   const [movies, setMovies] = useState(initialMovies);
 
   useEffect(() => {
     const getMovies = async () => {
-      const response = await fetch("/api/watching");
+      const response = await fetch("/api/watchnowmovies");
       const data = await response.json();
       setMovies(data);
     };
@@ -28,7 +28,7 @@ export default function pop() {
       </h1>
       <div className="flex flex-col items-end">
         <div className="flex flex-wrap justify-center">
-          {movies.map((movie) => (
+          {movies?.map((movie) => (
             <div
               key={movie?.title}
               className="flex flex-col items-center mx-4 sm:my-2 relative"
