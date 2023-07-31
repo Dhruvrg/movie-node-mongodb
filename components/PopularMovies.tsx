@@ -27,28 +27,28 @@ export default function pop() {
       </h1>
       <div className="flex flex-col items-end">
         <div className="flex flex-wrap justify-center">
-          {movies.map((movie) => (
+          {movies?.map((movie) => (
             <div
-              key={movie.title}
+              key={movie?.title}
               className="flex flex-col items-center mx-4 my-2 relative"
             >
               <img
-                src={movie.image}
-                alt={movie.title}
+                src={movie?.image}
+                alt={movie?.title}
                 className="h-72 w-96 rounded-xl"
               />
               <div
                 className="absolute bottom-12 md:w-full rounded-3xl p-2 md:bottom-6 w-80"
-                style={{ backgroundColor: movie.color }}
+                style={{ backgroundColor: movie?.color }}
               >
                 <div className="flex items-center space-x-2 px-2">
                   <div>
                     <h2 className="text-lg font-bold text-white">
-                      {movie.title}
+                      {movie?.title}
                     </h2>
                     <div className="flex items-center space-x-1">
                       <p className="text-sm font-semibold text-white">
-                        {movie.rating}
+                        {movie?.rating}
                       </p>
                       <img src="star.svg" alt="star" className="h-4 w-4" />
                     </div>
