@@ -10,9 +10,11 @@ const MoviesSchema = new Schema({
     type: String,
     required: [true, "image is required!"],
   },
+  time_remaining:{
+    type: String
+  },
   rating: {
     type: Number,
-    required: [true, "rating is required!"],
   },
   color: {
     type: String,

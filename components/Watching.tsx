@@ -15,7 +15,7 @@ export default function Watching() {
 
   useEffect(() => {
     const getMovies = async () => {
-      const response = await fetch("/api/watchnowmovies");
+      const response = await fetch("/api/watching");
       const data = await response.json();
       setMovies(data);
     };
