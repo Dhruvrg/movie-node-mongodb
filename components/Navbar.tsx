@@ -3,10 +3,12 @@
 import Avatar from "./Avatar";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
-import { TbSearch, TbCircle } from "react-icons/tb";
+import { TbSearch, TbCircle,TbUpload } from "react-icons/tb";
 import { AiOutlineMenu } from "react-icons/ai";
+import CreateModal from "./CreateModel";
 
 const Navbar = () => {
+  const createModal = CreateModal();
   const router = useRouter();
   const [domLoaded, setDomLoaded] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -88,6 +90,12 @@ const Navbar = () => {
               >
                 Plans
               </div>
+              <div
+                className="text-lg hover:text-white hover:text-xl duration-300"
+                onClick={()=>createModal.onOpen()}
+              >
+                Add Movie
+              </div>
             </div>
           )}
           <div className="gap-5 hidden sm:flex">
@@ -95,7 +103,8 @@ const Navbar = () => {
               className="text-lg hover:text-white hover:text-xl duration-300"
               size={30}
             />
-            <TbCircle
+            <TbUpload
+            onClick={()=>createModal.onOpen()}
               className="text-lg hover:text-white hover:text-xl duration-300"
               size={30}
             />

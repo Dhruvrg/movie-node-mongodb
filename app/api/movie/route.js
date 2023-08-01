@@ -16,7 +16,7 @@ export const POST = async (req) => {
 
   try {
     await connectToDB();
-    const newMovie = new Movies({ creator: title, image, rating, color });
+    const newMovie = new Movies({ title, image, rating, color });
     await newMovie.save();
     return new Response(JSON.stringify(newMovie), { status: 201 });
   } catch (error) {
