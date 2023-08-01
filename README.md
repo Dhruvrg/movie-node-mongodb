@@ -5,5 +5,5 @@
 ## Tech Stack 
 - Next.js
 - Tailwind CSS
-- MondoDB Atlas
+- MongoDB Atlas
 - Vercel
